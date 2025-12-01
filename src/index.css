@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lorin AI theme – warm orange ↔ pink */
+@layer base {
+  :root {
+    /* neutrals */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* brand – based on logo */
+    --primary: 18 84% 55%;         /* orange */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 18 90% 65%;
+    --primary-glow: 18 95% 70%;
+
+    --secondary: 30 20% 96%;
+    --secondary-foreground: 220 15% 15%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 340 82% 60%;         /* pink / magenta */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 18 84% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(340 82% 60%) 0%,
+      hsl(18 84% 55%) 45%,
+      hsl(30 96% 60%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(340 82% 60%) 0%,
+      hsl(18 84% 55%) 100%
+    );
+
+    --shadow-soft: 0 4px 20px -2px hsl(18 84% 35% / 0.12);
+    --shadow-glow: 0 0 40px hsl(18 95% 70% / 0.4);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 30 20% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 18 84% 55%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 30 25% 95%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 30 20% 90%;
+    --sidebar-ring: 18 84% 55%;
+  }
+
+  .dark {
+    --background: 240 10% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 18 84% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 18 90% 65%;
+    --primary-glow: 18 95% 70%;
+
+    --secondary: 240 8% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 8% 14%;
+    --muted-foreground: 220 15% 70%;
+
+    --accent: 340 82% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 8% 20%;
+    --input: 240 8% 20%;
+    --ring: 18 84% 55%;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 18 84% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 8% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 8% 18%;
+    --sidebar-ring: 18 84% 55%;
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(340 82% 60%) 0%,
+      hsl(18 84% 55%) 45%,
+      hsl(30 96% 60%) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(340 82% 60%) 0%,
+      hsl(18 84% 55%) 100%
+    );
+    --shadow-soft: 0 4px 20px -2px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(18 95% 70% / 0.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
